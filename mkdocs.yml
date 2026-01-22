@@ -1,0 +1,4 @@
+site_name: LLM Inference Optimization
+nav:
+  - Home: index.md
+theme: readthedocs
