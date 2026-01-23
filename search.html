@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Fasih Hassan" />
       <link rel="shortcut icon" href="./img/favicon.ico" />
     <title>LLM Inference Optimization</title>
     <link rel="stylesheet" href="./css/theme.css" />
@@ -35,6 +35,79 @@
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="./.">Home</a>
                 </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Background</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="./background/quantspec-overview/">QuantSpec Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./background/ggml-cuda-mapping/">Where QuantSpec Lives in ggml-cuda</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="./foundations/memory-bound-decoding/">Memory-Bound Decoding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./foundations/roofline/">Roofline & Arithmetic Intensity</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quantization Basics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="./quantization-basics/int8-packing/">INT8 Packing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./quantization-basics/int4-packing/">INT4 Packing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./quantization-basics/int4-reconstruction/">INT4 Residuals & Reconstruction</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hierarchical KV Cache</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="./hierarchical-kv/kv-cache-anatomy/">KV Cache Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./hierarchical-kv/hierarchical-kv/">Hierarchical INT4 KV Cache</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./hierarchical-kv/kv-bandwidth/">Bandwidth Analysis</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Attention Kernels</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="./attention-kernels/fp16-attention/">Baseline FP16 Attention</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./attention-kernels/int8-attention/">Quantized Attention (INT8)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./attention-kernels/int4-attention/">Quantized Attention (INT4)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./attention-kernels/warp-level/">Warp-Level Optimization</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reductions & Softmax</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="./reductions-softmax/warp-reductions/">Warp Reductions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./reductions-softmax/block-reductions/">Block Reductions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./reductions-softmax/numerical-stability/">Numerical Stability</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Performance Reproduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="./performance-reproduction/table5-mapping/">Mapping QuantSpec Table 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./performance-reproduction/kernel-benchmarks/">Kernel Benchmarks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./performance-reproduction/speedup-analysis/">Speedup Analysis</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modeling QuantSpec</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="./modeling-quantspec/double-buffer/">Double FP Buffer Concept</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="./modeling-quantspec/amortization/">Amortized Quantization Cost</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Synthesis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="./synthesis/synthesis/">Reproducing QuantSpec from First Principles</a>
+                  </li>
               </ul>
       </div>
     </div>
