@@ -1,4 +1,55 @@
 site_name: LLM Inference Optimization
+site_description: Kernel-level reproduction and analysis of QuantSpec inside ggml-cuda
+site_author: Fasih Hassan
+
+theme:
+  name: readthedocs
+  palette:
+    scheme: slate
+    primary: teal
+    accent: cyan
+
 nav:
   - Home: index.md
-theme: readthedocs
+
+  - Background:
+      - QuantSpec Overview: background/quantspec-overview.md
+      - Where QuantSpec Lives in ggml-cuda: background/ggml-cuda-mapping.md
+
+  - Foundations:
+      - Memory-Bound Decoding: foundations/memory-bound-decoding.md
+      - Roofline & Arithmetic Intensity: foundations/roofline.md
+
+  - Quantization Basics:
+      - INT8 Packing: quantization-basics/int8-packing.md
+      - INT4 Packing: quantization-basics/int4-packing.md
+      - INT4 Residuals & Reconstruction: quantization-basics/int4-reconstruction.md
+
+  - Hierarchical KV Cache:
+      - KV Cache Anatomy: hierarchical-kv/kv-cache-anatomy.md
+      - Hierarchical INT4 KV Cache: hierarchical-kv/hierarchical-kv.md
+      - Bandwidth Analysis: hierarchical-kv/kv-bandwidth.md
+
+  - Attention Kernels:
+      - Baseline FP16 Attention: attention-kernels/fp16-attention.md
+      - Quantized Attention (INT8): attention-kernels/int8-attention.md
+      - Quantized Attention (INT4): attention-kernels/int4-attention.md
+      - Warp-Level Optimization: attention-kernels/warp-level.md
+
+  - Reductions & Softmax:
+      - Warp Reductions: reductions-softmax/warp-reductions.md
+      - Block Reductions: reductions-softmax/block-reductions.md
+      - Numerical Stability: reductions-softmax/numerical-stability.md
+
+  - Performance Reproduction:
+      - Mapping QuantSpec Table 5: performance-reproduction/table5-mapping.md
+      - Kernel Benchmarks: performance-reproduction/kernel-benchmarks.md
+      - Speedup Analysis: performance-reproduction/speedup-analysis.md
+
+  - Modeling QuantSpec:
+      - Double FP Buffer Concept: modeling-quantspec/double-buffer.md
+      - Amortized Quantization Cost: modeling-quantspec/amortization.md
+
+  - Synthesis:
+      - Reproducing QuantSpec from First Principles: synthesis/synthesis.md
+
